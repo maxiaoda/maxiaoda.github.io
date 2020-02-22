@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>马小达的博客</title>
-    <link>http://example.org/</link>
+    <link>https://maxiaoda.github.io/</link>
     <description>Recent content on 马小达的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
     <lastBuildDate>Sat, 22 Feb 2020 11:01:50 +0800</lastBuildDate>
     
-	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://maxiaoda.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>博客</title>
-      <link>http://example.org/posts/%E5%8D%9A%E5%AE%A2/</link>
+      <link>https://maxiaoda.github.io/posts/%E5%8D%9A%E5%AE%A2/</link>
       <pubDate>Sat, 22 Feb 2020 11:01:50 +0800</pubDate>
       
-      <guid>http://example.org/posts/%E5%8D%9A%E5%AE%A2/</guid>
+      <guid>https://maxiaoda.github.io/posts/%E5%8D%9A%E5%AE%A2/</guid>
       <description>如何用hugo搭建个人博客 intall hugo</description>
     </item>
     
