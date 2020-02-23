@@ -12,12 +12,17 @@
     
     
     <item>
-      <title>博客</title>
+      <title>搭建个人博客</title>
       <link>https://maxiaoda.github.io/posts/%E5%8D%9A%E5%AE%A2/</link>
       <pubDate>Sat, 22 Feb 2020 11:01:50 +0800</pubDate>
       
       <guid>https://maxiaoda.github.io/posts/%E5%8D%9A%E5%AE%A2/</guid>
-      <description>如何用hugo搭建个人博客 intall hugo</description>
+      <description>如何用hugo搭建个人博客 本人搭建环境：
+ windows10 操作系统； 安装Git，version-2.25.0； 安装hugo，version-v0.65.2；   搭建步骤如下：
+  安装Hugo和添加环境变量：
+在Hugo的官方Github中，找到 Releases 下载对应的操作系统版本。将安装目录添加至windows系统环境变量中。   使用命令新建一个网站（使用命令时会在当前目录生效）。
+   hugo new site SiteName 进入SiteName目录cd SiteName输入以下命令，添加一个主题。  git init git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke 将主题添加至config.toml中。  echo &#39;theme = &amp;quot;ananke&amp;quot;&#39; &amp;gt;&amp;gt; config.toml 添加一篇名为my-first-post的博客。  hugo new posts/my-first-post.md 在my-first-post文件头部中的draft改为flase即可发布博客。  title: &amp;quot;My First Post&amp;quot; date: 2019-03-26T08:47:11+01:00 draft: true 启动Hugo server  hugo server -D  成功后访问http://localhost:1313/
+ 配置config.toml，baseURL设为新域名，languageCode的中文为zh-Hans，title为自己的博客名称。  baseURL = &amp;quot;https://example.</description>
     </item>
     
   </channel>
