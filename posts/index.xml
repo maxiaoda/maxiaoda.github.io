@@ -6,10 +6,25 @@
     <description>Recent content in Posts on 马小达的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Sat, 22 Feb 2020 11:01:50 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 24 Feb 2020 17:35:22 +0800</lastBuildDate>
     
 	<atom:link href="https://maxiaoda.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>我认为的Maven与Java的包管理</title>
+      <link>https://maxiaoda.github.io/posts/%E6%88%91%E8%AE%A4%E4%B8%BA%E7%9A%84maven%E4%B8%8Ejava%E7%9A%84%E5%8C%85%E7%AE%A1%E7%90%86/</link>
+      <pubDate>Mon, 24 Feb 2020 17:35:22 +0800</pubDate>
+      
+      <guid>https://maxiaoda.github.io/posts/%E6%88%91%E8%AE%A4%E4%B8%BA%E7%9A%84maven%E4%B8%8Ejava%E7%9A%84%E5%8C%85%E7%AE%A1%E7%90%86/</guid>
+      <description>我认为的Maven与Java的包管理 对Java和Maven的简单理解 学习了Java的包管理与Maven的包管理后，我认为最直观的对它们的理解是，Java相当于一个社会，而Maven相当于这个社会中的其中一个管理者。假设要找一个包，Java会挨个搜索，在信息不全面的情况下找到叫同样名字的包就认为这个就是了。而Maven作为管理者，会定位到家庭住址，将这个包找出来。
+Java的包管理 Java的管理机制很简单，将class path告诉jvm就好，而jvm更简单，给什么就编译什么。找不到方法，就在给jvm的class path中找错误。最重要的一个问题是累，不管是用到什么依赖，从开始的下载到之后的用，无论干什么都是手动控制，是非常非常的耗时耗力。
+Maven的包管理 划时代的包管理工具，一个有效解决依赖的工具，Maven解决了Java的包依赖和class path问题。将所有的包集中在一个仓库中。
+只需要仓库中找到&amp;lt;groupId&amp;gt;``&amp;lt;artifactId&amp;gt;``&amp;lt;version&amp;gt;的代码块
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;XXXX&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;XXXX&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;XXX.XXX.XXX&amp;lt;/version&amp;gt; &amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt; 告诉了Maven地址、街道、门牌号，剩下的Maven自己开始寻找这个包了。对比java，感受到了Maven的轻松。
+那么依赖冲突怎么解决的呢，依赖路径最短优先原则：A-&amp;gt;B-&amp;gt;C和A-&amp;gt;C那么后者路径最短，优先选择路径最短的，即选择A-&amp;gt;C。
+pom.xml文件是Maven管理这记录的名单，查的时候就看这个文件。pom.xml采用顺序优先原则，谁先被提到就用哪个依赖。  总结 最后，为什么Maven管理的比Java好呢？ 因为在Maven中有很强的约束，将这个包仓库管理的井井有条。</description>
+    </item>
     
     <item>
       <title>搭建个人博客</title>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<title>我认为的Maven与Java的包管理 | 马小达的博客</title>
+<meta charset="utf-8">
+<meta name="generator" content="Hugo 0.65.2" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxiaoda.github.io/css/index.css">
+<link rel="stylesheet" href="https://maxiaoda.github.io/css/classes.css">
+<link rel="canonical" href="https://maxiaoda.github.io/posts/%E6%88%91%E8%AE%A4%E4%B8%BA%E7%9A%84maven%E4%B8%8Ejava%E7%9A%84%E5%8C%85%E7%AE%A1%E7%90%86/">
+<link rel="alternate" type="application/rss+xml" href="" title="马小达的博客">
+
+<body>
+
+<header class="icons">
+  
+    <a href="https://maxiaoda.github.io/">马小达的博客</a>
+  
+  
+  
+</header>
+
+<article>
+  <header>
+    <h1>我认为的Maven与Java的包管理</h1>
+    <time datetime="2020-02-24T17:35:22&#43;08:00">February 24, 2020</time>
+  </header>
+  <h1 id="我认为的maven与java的包管理">我认为的Maven与Java的包管理</h1>
+<h2 id="对java和maven的简单理解">对Java和Maven的简单理解</h2>
+<p>学习了Java的包管理与Maven的包管理后，我认为最直观的对它们的理解是，Java相当于一个社会，而Maven相当于这个社会中的其中一个管理者。假设要找一个包，Java会挨个搜索，在信息不全面的情况下找到叫同样名字的包就认为这个就是了。而Maven作为管理者，会定位到家庭住址，将这个包找出来。</p>
+<h2 id="java的包管理">Java的包管理</h2>
+<p>Java的管理机制很简单，将class path告诉jvm就好，而jvm更简单，给什么就编译什么。找不到方法，就在给jvm的class path中找错误。最重要的一个问题是累，不管是用到什么依赖，从开始的下载到之后的用，无论干什么都是手动控制，是非常非常的耗时耗力。</p>
+<h2 id="maven的包管理">Maven的包管理</h2>
+<p>划时代的包管理工具，一个有效解决依赖的工具，Maven解决了Java的包依赖和class path问题。将所有的包集中在一个仓库中。</p>
+<p>只需要仓库中找到<code>&lt;groupId&gt;``&lt;artifactId&gt;``&lt;version&gt;</code>的代码块</p>
+<pre><code>&lt;dependency&gt;
+    &lt;groupId&gt;XXXX&lt;/groupId&gt;
+    &lt;artifactId&gt;XXXX&lt;/artifactId&gt;
+    &lt;version&gt;XXX.XXX.XXX&lt;/version&gt;
+    &lt;scope&gt;test&lt;/scope&gt;
+&lt;/dependency&gt;
+</code></pre><p>告诉了Maven地址、街道、门牌号，剩下的Maven自己开始寻找这个包了。对比java，感受到了Maven的轻松。</p>
+<p>那么依赖冲突怎么解决的呢，依赖路径最短优先原则：<code>A-&gt;B-&gt;C</code>和<code>A-&gt;C</code>那么后者路径最短，优先选择路径最短的，即选择<code>A-&gt;C</code>。</p>
+<pre><code>pom.xml文件是Maven管理这记录的名单，查的时候就看这个文件。pom.xml采用顺序优先原则，谁先被提到就用哪个依赖。
+</code></pre>
+<h2 id="总结">总结</h2>
+<p>最后，为什么Maven管理的比Java好呢？
+因为在Maven中有很强的约束，将这个包仓库管理的井井有条。</p>
+
+</article>
+
+
+
+</body>
+
+</html>
