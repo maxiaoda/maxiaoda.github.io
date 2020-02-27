@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<title>关于Collection的博客 | 马小达的博客</title>
+<meta charset="utf-8">
+<meta name="generator" content="Hugo 0.65.2" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxiaoda.github.io/css/index.css">
+<link rel="stylesheet" href="https://maxiaoda.github.io/css/classes.css">
+<link rel="canonical" href="https://maxiaoda.github.io/posts/%E5%85%B3%E4%BA%8Ecollection%E7%9A%84%E5%8D%9A%E5%AE%A2/">
+<link rel="alternate" type="application/rss+xml" href="" title="马小达的博客">
+
+<body>
+
+<header class="icons">
+  
+    <a href="https://maxiaoda.github.io/">马小达的博客</a>
+  
+  
+  
+</header>
+
+<article>
+  <header>
+    <h1>关于Collection的博客</h1>
+    <time datetime="2020-02-27T12:35:39&#43;08:00">February 27, 2020</time>
+  </header>
+  <h1 id="collection体系的常用类及其背后的数据结构">Collection体系的常用类及其背后的数据结构</h1>
+<h2 id="一collection的常用类">一、Collection的常用类</h2>
+<ol>
+<li>
+<p>List</p>
+<p>可以保存重复元素，拥有下标，存储有序，可以存储多个<code>null</code>元素。常用的类有：</p>
+</li>
+</ol>
+<ul>
+<li>ArrayList</li>
+<li>LinkedList</li>
+</ul>
+<ol start="2">
+<li>
+<p>Set</p>
+<p>不能保存重复元素，没有下标，可以存储null但只能有一个，并且不保证存取顺序。常用的类有：</p>
+</li>
+</ol>
+<ul>
+<li>HashSet（无序）</li>
+<li>LinkedHashSet（有序）</li>
+<li>TreeSet（排序）</li>
+</ul>
+<p>Collection体系如下图：
+<img src="/static/images/Collection%E4%BD%93%E7%B3%BB.png" alt="Collection体系"></p>
+<h2 id="二collection背后的数据结构">二、Collection背后的数据结构</h2>
+<ol>
+<li>ArrayList与LinedList</li>
+</ol>
+<ul>
+<li>Arraylist：底层使用的是 <code>Object</code> 数组。</li>
+<li>LinkedList：底层使用的是 <code>双向链表</code> 数据结构。</li>
+</ul>
+<ol>
+<li>HashSet、LinkedHashSet与TreeSet</li>
+</ol>
+<ul>
+<li>HashSet: 底层采用 <code>HashMap</code> 来保存元素，<code>HashMap</code> 使用的是拉链法，也叫作【链地址法】。</li>
+<li>LinkedHashSet：底层是链表+哈希表，链表保证数据存储有序，链表用来记录存储顺序；哈希表保证数据唯一，存储真正的数据</li>
+<li>TreeSet：红黑树(自平衡二叉查找树)。</li>
+</ul>
+
+</article>
+
+
+
+</body>
+
+</html>
