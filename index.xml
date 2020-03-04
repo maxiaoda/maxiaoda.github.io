@@ -6,10 +6,24 @@
     <description>Recent content on 马小达的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Thu, 27 Feb 2020 12:35:39 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 04 Mar 2020 20:23:59 +0800</lastBuildDate>
     
 	<atom:link href="https://maxiaoda.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>对Java多线程的初次认识</title>
+      <link>https://maxiaoda.github.io/posts/%E5%88%9D%E5%AD%A6%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Wed, 04 Mar 2020 20:23:59 +0800</pubDate>
+      
+      <guid>https://maxiaoda.github.io/posts/%E5%88%9D%E5%AD%A6%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%8D%9A%E5%AE%A2/</guid>
+      <description>对java多线程的初次认识  本文章是作者初次学习，如有不对的地方，请告知：问题链接
+ 基础知识 在一个进程中执行的单个任务叫做线程，执行多个任务叫多线程。
+术语 - 进程：一个进程包括由操作系统分配的内存空间，包含一个或多个线程。一个线程不能独立的存在，它必须是进程的一部分。一个进程一直运行，直到所有的非守护线程都结束运行后才能结束。
+使用多线程  创建多线程： 使用 new 关键字和 Thread 类或其子类建立一个线程对象后，该线程对象就处于新建状态。 运行多线程： 使用start()来运行多线程 阻塞状态： 如果一个线程执行了sleep（）方法，失去所占用资源之后，该线程就从运行状态进入阻塞状态。在睡眠时间已到或获得设备资源后可以重新进入就绪状态。 终止多线程： 一个运行的线程完成任务或者其他终止条件发生时，该线程就切换到终止状态。  为什么需要多线程 多线程能满足编写高效率的程序来达到充分利用 CPU 的目的。
+什么时候使用多线程 多线程在CPU密集型的作业下的确不能提高性能甚至更浪费时间，但是在IO密集型的作业下则可以提升性能（或者更准确点说叫平均响应时间）。
+总结：使用多线程是特别昂贵的，如果没有耗时的任务，使用多线程，效率反而更低，因为cpu 在线程间的切换也需要耗费时间。</description>
+    </item>
     
     <item>
       <title>Collection体系的常用类及其背后的数据结构</title>
