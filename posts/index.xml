@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 马小达的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Wed, 04 Mar 2020 20:23:59 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 16 Mar 2020 19:19:28 +0800</lastBuildDate>
     
 	<atom:link href="https://maxiaoda.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Java学习笔记收藏博客（持续更新）</title>
+      <link>https://maxiaoda.github.io/posts/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E6%94%B6%E8%97%8F/</link>
+      <pubDate>Mon, 16 Mar 2020 19:19:28 +0800</pubDate>
+      
+      <guid>https://maxiaoda.github.io/posts/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E6%94%B6%E8%97%8F/</guid>
+      <description>Java学习笔记  java8的Stream对集合操作飞起来——作者：坚持就是胜利。  </description>
+    </item>
     
     <item>
       <title>对Java多线程的初次认识</title>
