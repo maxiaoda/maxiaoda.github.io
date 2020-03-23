@@ -6,10 +6,25 @@
     <description>Recent content on 马小达的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Mon, 16 Mar 2020 19:19:28 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 23 Mar 2020 22:11:41 +0800</lastBuildDate>
     
 	<atom:link href="https://maxiaoda.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>《HTML常用标签》</title>
+      <link>https://maxiaoda.github.io/posts/%E5%85%B3%E4%BA%8Ehtml%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE%E7%9A%84%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Mon, 23 Mar 2020 22:11:41 +0800</pubDate>
+      
+      <guid>https://maxiaoda.github.io/posts/%E5%85%B3%E4%BA%8Ehtml%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE%E7%9A%84%E5%8D%9A%E5%AE%A2/</guid>
+      <description>关于HTML的常用标签 什么是HTML HTML的全拼为 HyperText Markup Language 是一种用于创建网页的标准标记语言，也是构成Web世界的一砖一瓦。
+“超文本”（hypertext）是指连接单个网站内或多个网站间的网页的链接。链接是网络的一个基本方面。只要将内容上传到互联网，并将其与他人创建的页面相链接，你就成为了万维网的积极参与者。
+HTML 使用“标记”（markup）来注明文本、图片和其他内容，以便于在 Web 浏览器中显示。
+a 标签的用法 很常用的标签
+&amp;lt;a href=&amp;quot;https://example.com&amp;quot;&amp;gt;Website&amp;lt;/a&amp;gt; &amp;lt;a href=&amp;quot;mailto:m.bluth@example.com&amp;quot;&amp;gt;Email&amp;lt;/a&amp;gt; &amp;lt;a href=&amp;quot;tel:+123456789&amp;quot;&amp;gt;Phone&amp;lt;/a&amp;gt; 作用：
+ 跳转外部页面 跳转邮箱 跳转电话  属性：
+ href：包含超链接指向的URL或URL片段。  img 标签的用法  作用：发出get请求，展示一张图片 属性：alt/height/width/src 事件：onload/onerror 响应式：max-width:100%  table 标签的用法  相关的标签  &amp;lt;caption&amp;gt;, &amp;lt;col&amp;gt;, &amp;lt;colgroup&amp;gt;, &amp;lt;tbody&amp;gt;, &amp;lt;td&amp;gt;, &amp;lt;tfoot&amp;gt;, &amp;lt;th&amp;gt;, &amp;lt;thead&amp;gt;, &amp;lt;tr&amp;gt;;   相关的样式(控制单元格边框，规则和框架方面)  border, border-style, border-color, border-width，border-collapse, border-spacing    </description>
+    </item>
     
     <item>
       <title>Java学习笔记收藏博客（持续更新）</title>
@@ -72,7 +87,7 @@ pom.xml文件是Maven管理这记录的名单，查的时候就看这个文件�
  windows10 操作系统； 安装Git，version-2.25.0； 安装hugo，version-v0.65.2；   搭建步骤如下：
   安装Hugo和添加环境变量：
 在Hugo的官方Github中，找到 Releases 下载对应的操作系统版本。将安装目录添加至windows系统环境变量中。   使用命令新建一个网站（使用命令时会在当前目录生效）。
-   hugo new site SiteName 进入SiteName目录cd SiteName输入以下命令，添加一个主题。  git init git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke 将主题添加至config.toml中。  echo &#39;theme = &amp;quot;ananke&amp;quot;&#39; &amp;gt;&amp;gt; config.toml 添加一篇名为my-first-post的博客。  hugo new posts/my-first-post.md 在my-first-post文件头部中的draft改为flase即可发布博客。  title: &amp;quot;My First Post&amp;quot; date: 2019-03-26T08:47:11+01:00 draft: true 启动Hugo server  hugo server -D  成功后访问http://localhost:1313/
+   hugo new site SiteName 进入SiteName目录cd SiteName输入以下命令，添加一个主题。  git init git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke 将主题添加至config.toml中。  echo &#39;theme = &amp;quot;ananke&amp;quot;&#39; &amp;gt;&amp;gt; config.toml 添加一篇名为my-first-post的博客。  hugo new posts/my-first-post.md 在my-first-post文件头部中的draft改为false即可发布博客。  title: &amp;quot;My First Post&amp;quot; date: 2019-03-26T08:47:11+01:00 draft: true 启动Hugo server  hugo server -D  成功后访问http://localhost:1313/
  配置config.toml，baseURL设为新域名，languageCode的中文为zh-Hans，title为自己的博客名称。  baseURL = &amp;quot;https://example.</description>
     </item>
     
