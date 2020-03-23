@@ -1,30 +1,110 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
-<title>如何用hugo搭建个人博客 | 马小达的博客</title>
-<meta charset="utf-8">
-<meta name="generator" content="Hugo 0.65.2" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://maxiaoda.github.io/css/index.css">
-<link rel="stylesheet" href="https://maxiaoda.github.io/css/classes.css">
-<link rel="canonical" href="https://maxiaoda.github.io/posts/%E5%8D%9A%E5%AE%A2/">
-<link rel="alternate" type="application/rss+xml" href="" title="马小达的博客">
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Hugo 0.65.2" />
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="" />
+  <meta property="og:url" content="https://maxiaoda.github.io/posts/%E5%8D%9A%E5%AE%A2/" />
+  <link rel="canonical" href="https://maxiaoda.github.io/posts/%E5%8D%9A%E5%AE%A2/" /><link rel="alternate" type="application/atom+xml" href="https://maxiaoda.github.io/index.xml" title="马小达的博客">
+
+  <script type="application/ld+json">
+  {
+      "@context" : "http://schema.org",
+      "@type" : "BlogPosting",
+      "mainEntityOfPage": {
+           "@type": "WebPage",
+           "@id": "https:\/\/maxiaoda.github.io\/"
+      },
+      "articleSection" : "posts",
+      "name" : "如何用hugo搭建个人博客",
+      "headline" : "如何用hugo搭建个人博客",
+      "description" : "如何用hugo搭建个人博客 本人搭建环境：\n windows10 操作系统； 安装Git，version-2.25.0； 安装hugo，version-v0.65.2；   搭建步骤如下：\n  安装Hugo和添加环境变量：\n在Hugo的官方Github中，找到 Releases 下载对应的操作系统版本。将安装目录添加至windows系统环境变量中。   使用命令新建一个网站（使用命令时会在当前目录生效）。\n   hugo new site SiteName 进入SiteName目录cd SiteName输入以下命令，添加一个主题。  git init git submodule add https:\/\/github.com\/budparr\/gohugo-theme-ananke.git themes\/ananke 将主题添加至config.toml中。  echo \x27theme = \x26quot;ananke\x26quot;\x27 \x26gt;\x26gt; config.toml 添加一篇名为my-first-post的博客。  hugo new posts\/my-first-post.md 在my-first-post文件头部中的draft改为false即可发布博客。  title: \x26quot;My First Post\x26quot; date: 2019-03-26T08:47:11\x2b01:00 draft: true 启动Hugo server  hugo server -D  成功后访问http:\/\/localhost:1313\/\n 配置config.toml，baseURL设为新域名，languageCode的中文为zh-Hans，title为自己的博客名称。  baseURL = \x26quot;https:\/\/example.",
+      "inLanguage" : "en-US",
+      "author" : "",
+      "creator" : "",
+      "publisher": "",
+      "accountablePerson" : "",
+      "copyrightHolder" : "",
+      "copyrightYear" : "2020",
+      "datePublished": "2020-02-22 11:01:50 \x2b0800 CST",
+      "dateModified" : "2020-02-22 11:01:50 \x2b0800 CST",
+      "url" : "https:\/\/maxiaoda.github.io\/posts\/%E5%8D%9A%E5%AE%A2\/",
+      "keywords" : [  ]
+  }
+</script>
+<title>如何用hugo搭建个人博客 - 马小达的博客</title>
+  <meta property="og:title" content="如何用hugo搭建个人博客 - 马小达的博客" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="如何用hugo搭建个人博客 本人搭建环境：
+ windows10 操作系统； 安装Git，version-2.25.0； 安装hugo，version-v0.65.2；   搭建步骤如下：
+  安装Hugo和添加环境变量：
+在Hugo的官方Github中，找到 Releases 下载对应的操作系统版本。将安装目录添加至windows系统环境变量中。   使用命令新建一个网站（使用命令时会在当前目录生效）。
+   hugo new site SiteName 进入SiteName目录cd SiteName输入以下命令，添加一个主题。  git init git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke 将主题添加至config.toml中。  echo &#39;theme = &quot;ananke&quot;&#39; &gt;&gt; config.toml 添加一篇名为my-first-post的博客。  hugo new posts/my-first-post.md 在my-first-post文件头部中的draft改为false即可发布博客。  title: &quot;My First Post&quot; date: 2019-03-26T08:47:11&#43;01:00 draft: true 启动Hugo server  hugo server -D  成功后访问http://localhost:1313/
+ 配置config.toml，baseURL设为新域名，languageCode的中文为zh-Hans，title为自己的博客名称。  baseURL = &quot;https://example." />
+  <meta name="description" content="如何用hugo搭建个人博客 本人搭建环境：
+ windows10 操作系统； 安装Git，version-2.25.0； 安装hugo，version-v0.65.2；   搭建步骤如下：
+  安装Hugo和添加环境变量：
+在Hugo的官方Github中，找到 Releases 下载对应的操作系统版本。将安装目录添加至windows系统环境变量中。   使用命令新建一个网站（使用命令时会在当前目录生效）。
+   hugo new site SiteName 进入SiteName目录cd SiteName输入以下命令，添加一个主题。  git init git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke 将主题添加至config.toml中。  echo &#39;theme = &quot;ananke&quot;&#39; &gt;&gt; config.toml 添加一篇名为my-first-post的博客。  hugo new posts/my-first-post.md 在my-first-post文件头部中的draft改为false即可发布博客。  title: &quot;My First Post&quot; date: 2019-03-26T08:47:11&#43;01:00 draft: true 启动Hugo server  hugo server -D  成功后访问http://localhost:1313/
+ 配置config.toml，baseURL设为新域名，languageCode的中文为zh-Hans，title为自己的博客名称。  baseURL = &quot;https://example." />
+  <meta property="og:locale" content="en-us" />
+
+  <link rel="stylesheet" href="/css/flexboxgrid-6.3.1.min.css" />
+  <link rel="stylesheet" href="/css/github-markdown.css" />
+  <link rel="stylesheet" href="/css/highlight/tomorrow.min.css" />
+  <link rel="stylesheet" href="/css/index.css">
+  <link href="/index.xml" rel="alternate" type="application/rss+xml"
+    title="马小达的博客">
+  
+  <link href="https://fonts.googleapis.com/css?family=Arvo|Permanent+Marker|Bree+Serif" rel="stylesheet">
+  
+  
+
+  
+</head>
 
 <body>
-
-<header class="icons">
-  
-    <a href="https://maxiaoda.github.io/">马小达的博客</a>
-  
-  
-  
+  <article class="post " id="article">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="site-header">
+          
+<header>
+  <div class="signatures site-title">
+    <a href="/">Maxiaoda&#39;s Blog</a>
+  </div>
 </header>
+<div class="row end-xs">
+  
+  
+</div>
+<div class="header-line"></div>
 
-<article>
-  <header>
-    <h1>如何用hugo搭建个人博客</h1>
-    <time datetime="2020-02-22T11:01:50&#43;08:00">February 22, 2020</time>
-  </header>
-  <h1 id="如何用hugo搭建个人博客">如何用hugo搭建个人博客</h1>
+        </div>
+        <header class="post-header">
+          <h1 class="post-title">如何用hugo搭建个人博客</h1>
+          
+          <div class="row post-desc">
+            <div class="col-xs-6">
+              
+              <time class="post-date" datetime="2020-02-22 11:01:50 CST">
+                22 Feb 2020
+              </time>
+              
+            </div>
+            <div class="col-xs-6">
+              
+            </div>
+          </div>
+          
+        </header>
+
+        <div class="post-content markdown-body">
+          
+          <h1 id="如何用hugo搭建个人博客">如何用hugo搭建个人博客</h1>
 <p>本人搭建环境：</p>
 <ol>
 <li>windows10 操作系统；</li>
@@ -83,9 +163,55 @@ theme = &quot;ananke&quot;
 <p>可生成public目录。</p>
 </blockquote>
 
-</article>
+        </div>
+
+        <div class="row middle-xs">
+          <div class="col-xs-12">
+            
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            
+          </div>
+        </div>
+
+        
+        
+
+        
+        
+        <div style="height: 50px;"></div>
+        
+        
+
+        <div class="site-footer">
+  
+  <div class="site-footer-item">
+    <a href="https://github.com/maxiaoda" target="_blank">Github</a>
+  </div>
+  
+  
+</div>
+
+      </div>
+    </div>
+  </article>
+
+  <script src="/js/highlight.pack.js"></script>
 
 
+<script>
+  hljs.initHighlightingOnLoad();
+  
+  
+  
+    
+    
+  
+</script>
+
+  
 
 </body>
 

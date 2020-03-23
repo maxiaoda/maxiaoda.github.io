@@ -1,30 +1,110 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
-<title>对Java多线程的初次认识 | 马小达的博客</title>
-<meta charset="utf-8">
-<meta name="generator" content="Hugo 0.65.2" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://maxiaoda.github.io/css/index.css">
-<link rel="stylesheet" href="https://maxiaoda.github.io/css/classes.css">
-<link rel="canonical" href="https://maxiaoda.github.io/posts/%E5%88%9D%E5%AD%A6%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%8D%9A%E5%AE%A2/">
-<link rel="alternate" type="application/rss+xml" href="" title="马小达的博客">
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Hugo 0.65.2" />
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="" />
+  <meta property="og:url" content="https://maxiaoda.github.io/posts/%E5%88%9D%E5%AD%A6%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%8D%9A%E5%AE%A2/" />
+  <link rel="canonical" href="https://maxiaoda.github.io/posts/%E5%88%9D%E5%AD%A6%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%8D%9A%E5%AE%A2/" /><link rel="alternate" type="application/atom+xml" href="https://maxiaoda.github.io/index.xml" title="马小达的博客">
+
+  <script type="application/ld+json">
+  {
+      "@context" : "http://schema.org",
+      "@type" : "BlogPosting",
+      "mainEntityOfPage": {
+           "@type": "WebPage",
+           "@id": "https:\/\/maxiaoda.github.io\/"
+      },
+      "articleSection" : "posts",
+      "name" : "对Java多线程的初次认识",
+      "headline" : "对Java多线程的初次认识",
+      "description" : "对java多线程的初次认识  本文章是作者初次学习，如有不对的地方，请告知：问题链接\n 基础知识 在一个进程中执行的单个任务叫做线程，执行多个任务叫多线程。\n术语 - 进程：一个进程包括由操作系统分配的内存空间，包含一个或多个线程。一个线程不能独立的存在，它必须是进程的一部分。一个进程一直运行，直到所有的非守护线程都结束运行后才能结束。\n使用多线程  创建多线程： 使用 new 关键字和 Thread 类或其子类建立一个线程对象后，该线程对象就处于新建状态。 运行多线程： 使用start()来运行多线程 阻塞状态： 如果一个线程执行了sleep（）方法，失去所占用资源之后，该线程就从运行状态进入阻塞状态。在睡眠时间已到或获得设备资源后可以重新进入就绪状态。 终止多线程： 一个运行的线程完成任务或者其他终止条件发生时，该线程就切换到终止状态。  为什么需要多线程 多线程能满足编写高效率的程序来达到充分利用 CPU 的目的。\n什么时候使用多线程 多线程在CPU密集型的作业下的确不能提高性能甚至更浪费时间，但是在IO密集型的作业下则可以提升性能（或者更准确点说叫平均响应时间）。\n总结：使用多线程是特别昂贵的，如果没有耗时的任务，使用多线程，效率反而更低，因为cpu 在线程间的切换也需要耗费时间。",
+      "inLanguage" : "en-US",
+      "author" : "",
+      "creator" : "",
+      "publisher": "",
+      "accountablePerson" : "",
+      "copyrightHolder" : "",
+      "copyrightYear" : "2020",
+      "datePublished": "2020-03-04 20:23:59 \x2b0800 CST",
+      "dateModified" : "2020-03-04 20:23:59 \x2b0800 CST",
+      "url" : "https:\/\/maxiaoda.github.io\/posts\/%E5%88%9D%E5%AD%A6%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%8D%9A%E5%AE%A2\/",
+      "keywords" : [  ]
+  }
+</script>
+<title>对Java多线程的初次认识 - 马小达的博客</title>
+  <meta property="og:title" content="对Java多线程的初次认识 - 马小达的博客" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="对java多线程的初次认识  本文章是作者初次学习，如有不对的地方，请告知：问题链接
+ 基础知识 在一个进程中执行的单个任务叫做线程，执行多个任务叫多线程。
+术语 - 进程：一个进程包括由操作系统分配的内存空间，包含一个或多个线程。一个线程不能独立的存在，它必须是进程的一部分。一个进程一直运行，直到所有的非守护线程都结束运行后才能结束。
+使用多线程  创建多线程： 使用 new 关键字和 Thread 类或其子类建立一个线程对象后，该线程对象就处于新建状态。 运行多线程： 使用start()来运行多线程 阻塞状态： 如果一个线程执行了sleep（）方法，失去所占用资源之后，该线程就从运行状态进入阻塞状态。在睡眠时间已到或获得设备资源后可以重新进入就绪状态。 终止多线程： 一个运行的线程完成任务或者其他终止条件发生时，该线程就切换到终止状态。  为什么需要多线程 多线程能满足编写高效率的程序来达到充分利用 CPU 的目的。
+什么时候使用多线程 多线程在CPU密集型的作业下的确不能提高性能甚至更浪费时间，但是在IO密集型的作业下则可以提升性能（或者更准确点说叫平均响应时间）。
+总结：使用多线程是特别昂贵的，如果没有耗时的任务，使用多线程，效率反而更低，因为cpu 在线程间的切换也需要耗费时间。" />
+  <meta name="description" content="对java多线程的初次认识  本文章是作者初次学习，如有不对的地方，请告知：问题链接
+ 基础知识 在一个进程中执行的单个任务叫做线程，执行多个任务叫多线程。
+术语 - 进程：一个进程包括由操作系统分配的内存空间，包含一个或多个线程。一个线程不能独立的存在，它必须是进程的一部分。一个进程一直运行，直到所有的非守护线程都结束运行后才能结束。
+使用多线程  创建多线程： 使用 new 关键字和 Thread 类或其子类建立一个线程对象后，该线程对象就处于新建状态。 运行多线程： 使用start()来运行多线程 阻塞状态： 如果一个线程执行了sleep（）方法，失去所占用资源之后，该线程就从运行状态进入阻塞状态。在睡眠时间已到或获得设备资源后可以重新进入就绪状态。 终止多线程： 一个运行的线程完成任务或者其他终止条件发生时，该线程就切换到终止状态。  为什么需要多线程 多线程能满足编写高效率的程序来达到充分利用 CPU 的目的。
+什么时候使用多线程 多线程在CPU密集型的作业下的确不能提高性能甚至更浪费时间，但是在IO密集型的作业下则可以提升性能（或者更准确点说叫平均响应时间）。
+总结：使用多线程是特别昂贵的，如果没有耗时的任务，使用多线程，效率反而更低，因为cpu 在线程间的切换也需要耗费时间。" />
+  <meta property="og:locale" content="en-us" />
+
+  <link rel="stylesheet" href="/css/flexboxgrid-6.3.1.min.css" />
+  <link rel="stylesheet" href="/css/github-markdown.css" />
+  <link rel="stylesheet" href="/css/highlight/tomorrow.min.css" />
+  <link rel="stylesheet" href="/css/index.css">
+  <link href="/index.xml" rel="alternate" type="application/rss+xml"
+    title="马小达的博客">
+  
+  <link href="https://fonts.googleapis.com/css?family=Arvo|Permanent+Marker|Bree+Serif" rel="stylesheet">
+  
+  
+
+  
+</head>
 
 <body>
-
-<header class="icons">
-  
-    <a href="https://maxiaoda.github.io/">马小达的博客</a>
-  
-  
-  
+  <article class="post " id="article">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="site-header">
+          
+<header>
+  <div class="signatures site-title">
+    <a href="/">Maxiaoda&#39;s Blog</a>
+  </div>
 </header>
+<div class="row end-xs">
+  
+  
+</div>
+<div class="header-line"></div>
 
-<article>
-  <header>
-    <h1>对Java多线程的初次认识</h1>
-    <time datetime="2020-03-04T20:23:59&#43;08:00">March 04, 2020</time>
-  </header>
-  <h1 id="对java多线程的初次认识">对java多线程的初次认识</h1>
+        </div>
+        <header class="post-header">
+          <h1 class="post-title">对Java多线程的初次认识</h1>
+          
+          <div class="row post-desc">
+            <div class="col-xs-6">
+              
+              <time class="post-date" datetime="2020-03-04 20:23:59 CST">
+                04 Mar 2020
+              </time>
+              
+            </div>
+            <div class="col-xs-6">
+              
+            </div>
+          </div>
+          
+        </header>
+
+        <div class="post-content markdown-body">
+          
+          <h1 id="对java多线程的初次认识">对java多线程的初次认识</h1>
 <blockquote>
 <p>本文章是作者初次学习，如有不对的地方，请告知：<a href="https://github.com/maxiaoda/maxiaoda.github.io/issues">问题链接</a></p>
 </blockquote>
@@ -48,9 +128,55 @@
 <p>多线程在CPU密集型的作业下的确不能提高性能甚至更浪费时间，但是在IO密集型的作业下则可以提升性能（或者更准确点说叫平均响应时间）。</p>
 <p>总结：使用多线程是特别昂贵的，如果没有耗时的任务，使用多线程，效率反而更低，因为cpu 在线程间的切换也需要耗费时间。</p>
 
-</article>
+        </div>
+
+        <div class="row middle-xs">
+          <div class="col-xs-12">
+            
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            
+          </div>
+        </div>
+
+        
+        
+
+        
+        
+        <div style="height: 50px;"></div>
+        
+        
+
+        <div class="site-footer">
+  
+  <div class="site-footer-item">
+    <a href="https://github.com/maxiaoda" target="_blank">Github</a>
+  </div>
+  
+  
+</div>
+
+      </div>
+    </div>
+  </article>
+
+  <script src="/js/highlight.pack.js"></script>
 
 
+<script>
+  hljs.initHighlightingOnLoad();
+  
+  
+  
+    
+    
+  
+</script>
+
+  
 
 </body>
 

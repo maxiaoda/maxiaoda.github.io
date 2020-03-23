@@ -1,30 +1,112 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
-<title>我认为的Maven与Java的包管理 | 马小达的博客</title>
-<meta charset="utf-8">
-<meta name="generator" content="Hugo 0.65.2" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://maxiaoda.github.io/css/index.css">
-<link rel="stylesheet" href="https://maxiaoda.github.io/css/classes.css">
-<link rel="canonical" href="https://maxiaoda.github.io/posts/%E6%88%91%E8%AE%A4%E4%B8%BA%E7%9A%84maven%E4%B8%8Ejava%E7%9A%84%E5%8C%85%E7%AE%A1%E7%90%86/">
-<link rel="alternate" type="application/rss+xml" href="" title="马小达的博客">
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Hugo 0.65.2" />
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="" />
+  <meta property="og:url" content="https://maxiaoda.github.io/posts/%E6%88%91%E8%AE%A4%E4%B8%BA%E7%9A%84maven%E4%B8%8Ejava%E7%9A%84%E5%8C%85%E7%AE%A1%E7%90%86/" />
+  <link rel="canonical" href="https://maxiaoda.github.io/posts/%E6%88%91%E8%AE%A4%E4%B8%BA%E7%9A%84maven%E4%B8%8Ejava%E7%9A%84%E5%8C%85%E7%AE%A1%E7%90%86/" /><link rel="alternate" type="application/atom+xml" href="https://maxiaoda.github.io/index.xml" title="马小达的博客">
+
+  <script type="application/ld+json">
+  {
+      "@context" : "http://schema.org",
+      "@type" : "BlogPosting",
+      "mainEntityOfPage": {
+           "@type": "WebPage",
+           "@id": "https:\/\/maxiaoda.github.io\/"
+      },
+      "articleSection" : "posts",
+      "name" : "我认为的Maven与Java的包管理",
+      "headline" : "我认为的Maven与Java的包管理",
+      "description" : "我认为的Maven与Java的包管理 对Java和Maven的简单理解 学习了Java的包管理与Maven的包管理后，我认为最直观的对它们的理解是，Java相当于一个社会，而Maven相当于这个社会中的其中一个管理者。假设要找一个包，Java会挨个搜索，在信息不全面的情况下找到叫同样名字的包就认为这个就是了。而Maven作为管理者，会定位到家庭住址，将这个包找出来。\nJava的包管理 Java的管理机制很简单，将class path告诉jvm就好，而jvm更简单，给什么就编译什么。找不到方法，就在给jvm的class path中找错误。最重要的一个问题是累，不管是用到什么依赖，从开始的下载到之后的用，无论干什么都是手动控制，是非常非常的耗时耗力。\nMaven的包管理 划时代的包管理工具，一个有效解决依赖的工具，Maven解决了Java的包依赖和class path问题。将所有的包集中在一个仓库中。\n只需要仓库中找到\x26lt;groupId\x26gt;``\x26lt;artifactId\x26gt;``\x26lt;version\x26gt;的代码块\n\x26lt;dependency\x26gt; \x26lt;groupId\x26gt;XXXX\x26lt;\/groupId\x26gt; \x26lt;artifactId\x26gt;XXXX\x26lt;\/artifactId\x26gt; \x26lt;version\x26gt;XXX.XXX.XXX\x26lt;\/version\x26gt; \x26lt;scope\x26gt;test\x26lt;\/scope\x26gt; \x26lt;\/dependency\x26gt; 告诉了Maven地址、街道、门牌号，剩下的Maven自己开始寻找这个包了。对比java，感受到了Maven的轻松。\n那么依赖冲突怎么解决的呢，依赖路径最短优先原则：A-\x26gt;B-\x26gt;C和A-\x26gt;C那么后者路径最短，优先选择路径最短的，即选择A-\x26gt;C。\npom.xml文件是Maven管理这记录的名单，查的时候就看这个文件。pom.xml采用顺序优先原则，谁先被提到就用哪个依赖。  总结 最后，为什么Maven管理的比Java好呢？ 因为在Maven中有很强的约束，将这个包仓库管理的井井有条。",
+      "inLanguage" : "en-US",
+      "author" : "",
+      "creator" : "",
+      "publisher": "",
+      "accountablePerson" : "",
+      "copyrightHolder" : "",
+      "copyrightYear" : "2020",
+      "datePublished": "2020-02-24 17:35:22 \x2b0800 CST",
+      "dateModified" : "2020-02-24 17:35:22 \x2b0800 CST",
+      "url" : "https:\/\/maxiaoda.github.io\/posts\/%E6%88%91%E8%AE%A4%E4%B8%BA%E7%9A%84maven%E4%B8%8Ejava%E7%9A%84%E5%8C%85%E7%AE%A1%E7%90%86\/",
+      "keywords" : [  ]
+  }
+</script>
+<title>我认为的Maven与Java的包管理 - 马小达的博客</title>
+  <meta property="og:title" content="我认为的Maven与Java的包管理 - 马小达的博客" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="我认为的Maven与Java的包管理 对Java和Maven的简单理解 学习了Java的包管理与Maven的包管理后，我认为最直观的对它们的理解是，Java相当于一个社会，而Maven相当于这个社会中的其中一个管理者。假设要找一个包，Java会挨个搜索，在信息不全面的情况下找到叫同样名字的包就认为这个就是了。而Maven作为管理者，会定位到家庭住址，将这个包找出来。
+Java的包管理 Java的管理机制很简单，将class path告诉jvm就好，而jvm更简单，给什么就编译什么。找不到方法，就在给jvm的class path中找错误。最重要的一个问题是累，不管是用到什么依赖，从开始的下载到之后的用，无论干什么都是手动控制，是非常非常的耗时耗力。
+Maven的包管理 划时代的包管理工具，一个有效解决依赖的工具，Maven解决了Java的包依赖和class path问题。将所有的包集中在一个仓库中。
+只需要仓库中找到&lt;groupId&gt;``&lt;artifactId&gt;``&lt;version&gt;的代码块
+&lt;dependency&gt; &lt;groupId&gt;XXXX&lt;/groupId&gt; &lt;artifactId&gt;XXXX&lt;/artifactId&gt; &lt;version&gt;XXX.XXX.XXX&lt;/version&gt; &lt;scope&gt;test&lt;/scope&gt; &lt;/dependency&gt; 告诉了Maven地址、街道、门牌号，剩下的Maven自己开始寻找这个包了。对比java，感受到了Maven的轻松。
+那么依赖冲突怎么解决的呢，依赖路径最短优先原则：A-&gt;B-&gt;C和A-&gt;C那么后者路径最短，优先选择路径最短的，即选择A-&gt;C。
+pom.xml文件是Maven管理这记录的名单，查的时候就看这个文件。pom.xml采用顺序优先原则，谁先被提到就用哪个依赖。  总结 最后，为什么Maven管理的比Java好呢？ 因为在Maven中有很强的约束，将这个包仓库管理的井井有条。" />
+  <meta name="description" content="我认为的Maven与Java的包管理 对Java和Maven的简单理解 学习了Java的包管理与Maven的包管理后，我认为最直观的对它们的理解是，Java相当于一个社会，而Maven相当于这个社会中的其中一个管理者。假设要找一个包，Java会挨个搜索，在信息不全面的情况下找到叫同样名字的包就认为这个就是了。而Maven作为管理者，会定位到家庭住址，将这个包找出来。
+Java的包管理 Java的管理机制很简单，将class path告诉jvm就好，而jvm更简单，给什么就编译什么。找不到方法，就在给jvm的class path中找错误。最重要的一个问题是累，不管是用到什么依赖，从开始的下载到之后的用，无论干什么都是手动控制，是非常非常的耗时耗力。
+Maven的包管理 划时代的包管理工具，一个有效解决依赖的工具，Maven解决了Java的包依赖和class path问题。将所有的包集中在一个仓库中。
+只需要仓库中找到&lt;groupId&gt;``&lt;artifactId&gt;``&lt;version&gt;的代码块
+&lt;dependency&gt; &lt;groupId&gt;XXXX&lt;/groupId&gt; &lt;artifactId&gt;XXXX&lt;/artifactId&gt; &lt;version&gt;XXX.XXX.XXX&lt;/version&gt; &lt;scope&gt;test&lt;/scope&gt; &lt;/dependency&gt; 告诉了Maven地址、街道、门牌号，剩下的Maven自己开始寻找这个包了。对比java，感受到了Maven的轻松。
+那么依赖冲突怎么解决的呢，依赖路径最短优先原则：A-&gt;B-&gt;C和A-&gt;C那么后者路径最短，优先选择路径最短的，即选择A-&gt;C。
+pom.xml文件是Maven管理这记录的名单，查的时候就看这个文件。pom.xml采用顺序优先原则，谁先被提到就用哪个依赖。  总结 最后，为什么Maven管理的比Java好呢？ 因为在Maven中有很强的约束，将这个包仓库管理的井井有条。" />
+  <meta property="og:locale" content="en-us" />
+
+  <link rel="stylesheet" href="/css/flexboxgrid-6.3.1.min.css" />
+  <link rel="stylesheet" href="/css/github-markdown.css" />
+  <link rel="stylesheet" href="/css/highlight/tomorrow.min.css" />
+  <link rel="stylesheet" href="/css/index.css">
+  <link href="/index.xml" rel="alternate" type="application/rss+xml"
+    title="马小达的博客">
+  
+  <link href="https://fonts.googleapis.com/css?family=Arvo|Permanent+Marker|Bree+Serif" rel="stylesheet">
+  
+  
+
+  
+</head>
 
 <body>
-
-<header class="icons">
-  
-    <a href="https://maxiaoda.github.io/">马小达的博客</a>
-  
-  
-  
+  <article class="post " id="article">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="site-header">
+          
+<header>
+  <div class="signatures site-title">
+    <a href="/">Maxiaoda&#39;s Blog</a>
+  </div>
 </header>
+<div class="row end-xs">
+  
+  
+</div>
+<div class="header-line"></div>
 
-<article>
-  <header>
-    <h1>我认为的Maven与Java的包管理</h1>
-    <time datetime="2020-02-24T17:35:22&#43;08:00">February 24, 2020</time>
-  </header>
-  <h1 id="我认为的maven与java的包管理">我认为的Maven与Java的包管理</h1>
+        </div>
+        <header class="post-header">
+          <h1 class="post-title">我认为的Maven与Java的包管理</h1>
+          
+          <div class="row post-desc">
+            <div class="col-xs-6">
+              
+              <time class="post-date" datetime="2020-02-24 17:35:22 CST">
+                24 Feb 2020
+              </time>
+              
+            </div>
+            <div class="col-xs-6">
+              
+            </div>
+          </div>
+          
+        </header>
+
+        <div class="post-content markdown-body">
+          
+          <h1 id="我认为的maven与java的包管理">我认为的Maven与Java的包管理</h1>
 <h2 id="对java和maven的简单理解">对Java和Maven的简单理解</h2>
 <p>学习了Java的包管理与Maven的包管理后，我认为最直观的对它们的理解是，Java相当于一个社会，而Maven相当于这个社会中的其中一个管理者。假设要找一个包，Java会挨个搜索，在信息不全面的情况下找到叫同样名字的包就认为这个就是了。而Maven作为管理者，会定位到家庭住址，将这个包找出来。</p>
 <h2 id="java的包管理">Java的包管理</h2>
@@ -46,9 +128,55 @@
 <p>最后，为什么Maven管理的比Java好呢？
 因为在Maven中有很强的约束，将这个包仓库管理的井井有条。</p>
 
-</article>
+        </div>
+
+        <div class="row middle-xs">
+          <div class="col-xs-12">
+            
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            
+          </div>
+        </div>
+
+        
+        
+
+        
+        
+        <div style="height: 50px;"></div>
+        
+        
+
+        <div class="site-footer">
+  
+  <div class="site-footer-item">
+    <a href="https://github.com/maxiaoda" target="_blank">Github</a>
+  </div>
+  
+  
+</div>
+
+      </div>
+    </div>
+  </article>
+
+  <script src="/js/highlight.pack.js"></script>
 
 
+<script>
+  hljs.initHighlightingOnLoad();
+  
+  
+  
+    
+    
+  
+</script>
+
+  
 
 </body>
 
