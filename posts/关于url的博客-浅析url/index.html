@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Hugo 0.65.2" />
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="" />
+  <meta property="og:url" content="https://maxiaoda.github.io/posts/%E5%85%B3%E4%BA%8Eurl%E7%9A%84%E5%8D%9A%E5%AE%A2-%E6%B5%85%E6%9E%90url/" />
+  <link rel="canonical" href="https://maxiaoda.github.io/posts/%E5%85%B3%E4%BA%8Eurl%E7%9A%84%E5%8D%9A%E5%AE%A2-%E6%B5%85%E6%9E%90url/" /><link rel="alternate" type="application/atom+xml" href="https://maxiaoda.github.io/index.xml" title="马小达的博客">
+
+  <script type="application/ld+json">
+  {
+      "@context" : "http://schema.org",
+      "@type" : "BlogPosting",
+      "mainEntityOfPage": {
+           "@type": "WebPage",
+           "@id": "https:\/\/maxiaoda.github.io\/"
+      },
+      "articleSection" : "posts",
+      "name" : "浅析URL",
+      "headline" : "浅析URL",
+      "description" : "什么是URL URL指的是统一资源定位符（Uniform Resource Locator）。URL无非就是一个给定的独特资源在Web上的地址。\nURL包含哪几部分？作用分别是什么？ URL由三部分组成：协议类型，服务器地址和路径及文件名。\n标准格式如下：\n[协议类型]:\/\/[服务器地址]:[端口号]\/[资源层级UNIX文件路径][文件名]?[查询]#[片段ID] 完整格式如下：\n[协议类型]:\/\/[访问资源需要的凭证信息]@[服务器地址]:[端口号]\/[资源层级UNIX文件路径][文件名]?[查询]#[片段ID] 其中 `[访问凭证信息]、[端口号]、[查询]、[片段ID]`都属于选填项。   协议（protocol）：指的是使用什么样的传输协议，一般有http、ftp、file等协议。 服务器。（通常为域名，有时为IP地址） 端口号。（以数字方式表示，若为默认值可省略） 路径。（以“\/”字符区别路径中的每一个目录名称） 查询。（GET模式的窗体参数，以“?”字符为起点，每个参数以“\x26amp;”隔开，再以“=”分开参数名称与数据，通常以UTF8的URL编码，避开字符冲突的问题） 片段。以“#”字符为起点  DNS 的作用是什么，nslookup 命令怎么用 DNS(域名系统,Domain Name System）是互联网的一项服务。它作为将域名和IP地址相互映射的一个分布式数据库，能够使人更方便地访问互联网。它的作用很简单，就是根据域名查出IP地址。\nnslookup是一种网络管理命令行工具，可在许多计算机操作系统中使用，用于查询域名系统（DNS）以获得域名或IP地址映射或其他DNS记录。\nnslookup语法：nslookup [ -Option ... ] [ Host ] [ -NameServer ]\nIP 的作用是什么，ping 命令怎么用 IP简单的理解就是门牌号。\nping的用法：\nping [-t] [-a] [-n count] [-l size] [-f] [-i TTL] [-v TOS] [-r count] [-s count] [[-j host-list] | [-k host-list]] [-w timeout] [-R] [-S srcaddr] [-4] [-6] target_name -t ： Ping 指定的计算机直到中断。 -a ： 将地址解析为计算机名。 -n count ： 发送 count 指定的 ECHO 数据包数。默认值为 4。 -l size ： 发送包含由 size 指定的数据量的 ECHO 数据包。默认为 32 字节；最大值是65,527。 -f ： 在数据包中发送\x26quot;不要分段\x26quot;标志。数据包就不会被路由上的网关分段。 -i ttl : 将\x26quot;生存时间\x26quot;字段设置为 ttl 指定的值。 -v tos : 将\x26quot;服务类型\x26quot;字段设置为 tos 指定的值。 -r count : 在\x26quot;记录路由\x26quot;字段中记录传出和返回数据包的路由。count 可以指定最少 1 台，最多 9 台计算机。 -s count : 指定 count 指定的跃点数的时间戳。 -j host-list : 利用 host-list 指定的计算机列表路由数据包。连续计算机可以被中间网关分隔（路由稀疏源）IP 允许的最大数量为 9。 -k host-list : 利用 host-list 指定的计算机列表路由数据包。连续计算机不能被中间网关分隔（路由严格源）IP 允许的最大数量为 9。 -w timeout : 指定超时间隔，单位为毫秒。 destination-list : 指定要 ping 的远程计算机。 ",
+      "inLanguage" : "en-US",
+      "author" : "",
+      "creator" : "",
+      "publisher": "",
+      "accountablePerson" : "",
+      "copyrightHolder" : "",
+      "copyrightYear" : "2020",
+      "datePublished": "2020-03-24 01:05:43 \x2b0800 CST",
+      "dateModified" : "2020-03-24 01:05:43 \x2b0800 CST",
+      "url" : "https:\/\/maxiaoda.github.io\/posts\/%E5%85%B3%E4%BA%8Eurl%E7%9A%84%E5%8D%9A%E5%AE%A2-%E6%B5%85%E6%9E%90url\/",
+      "keywords" : [  ]
+  }
+</script>
+<title>浅析URL - 马小达的博客</title>
+  <meta property="og:title" content="浅析URL - 马小达的博客" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="什么是URL URL指的是统一资源定位符（Uniform Resource Locator）。URL无非就是一个给定的独特资源在Web上的地址。
+URL包含哪几部分？作用分别是什么？ URL由三部分组成：协议类型，服务器地址和路径及文件名。
+标准格式如下：
+[协议类型]://[服务器地址]:[端口号]/[资源层级UNIX文件路径][文件名]?[查询]#[片段ID] 完整格式如下：
+[协议类型]://[访问资源需要的凭证信息]@[服务器地址]:[端口号]/[资源层级UNIX文件路径][文件名]?[查询]#[片段ID] 其中 `[访问凭证信息]、[端口号]、[查询]、[片段ID]`都属于选填项。   协议（protocol）：指的是使用什么样的传输协议，一般有http、ftp、file等协议。 服务器。（通常为域名，有时为IP地址） 端口号。（以数字方式表示，若为默认值可省略） 路径。（以“/”字符区别路径中的每一个目录名称） 查询。（GET模式的窗体参数，以“?”字符为起点，每个参数以“&amp;”隔开，再以“=”分开参数名称与数据，通常以UTF8的URL编码，避开字符冲突的问题） 片段。以“#”字符为起点  DNS 的作用是什么，nslookup 命令怎么用 DNS(域名系统,Domain Name System）是互联网的一项服务。它作为将域名和IP地址相互映射的一个分布式数据库，能够使人更方便地访问互联网。它的作用很简单，就是根据域名查出IP地址。
+nslookup是一种网络管理命令行工具，可在许多计算机操作系统中使用，用于查询域名系统（DNS）以获得域名或IP地址映射或其他DNS记录。
+nslookup语法：nslookup [ -Option ... ] [ Host ] [ -NameServer ]
+IP 的作用是什么，ping 命令怎么用 IP简单的理解就是门牌号。
+ping的用法：
+ping [-t] [-a] [-n count] [-l size] [-f] [-i TTL] [-v TOS] [-r count] [-s count] [[-j host-list] | [-k host-list]] [-w timeout] [-R] [-S srcaddr] [-4] [-6] target_name -t ： Ping 指定的计算机直到中断。 -a ： 将地址解析为计算机名。 -n count ： 发送 count 指定的 ECHO 数据包数。默认值为 4。 -l size ： 发送包含由 size 指定的数据量的 ECHO 数据包。默认为 32 字节；最大值是65,527。 -f ： 在数据包中发送&quot;不要分段&quot;标志。数据包就不会被路由上的网关分段。 -i ttl : 将&quot;生存时间&quot;字段设置为 ttl 指定的值。 -v tos : 将&quot;服务类型&quot;字段设置为 tos 指定的值。 -r count : 在&quot;记录路由&quot;字段中记录传出和返回数据包的路由。count 可以指定最少 1 台，最多 9 台计算机。 -s count : 指定 count 指定的跃点数的时间戳。 -j host-list : 利用 host-list 指定的计算机列表路由数据包。连续计算机可以被中间网关分隔（路由稀疏源）IP 允许的最大数量为 9。 -k host-list : 利用 host-list 指定的计算机列表路由数据包。连续计算机不能被中间网关分隔（路由严格源）IP 允许的最大数量为 9。 -w timeout : 指定超时间隔，单位为毫秒。 destination-list : 指定要 ping 的远程计算机。 " />
+  <meta name="description" content="什么是URL URL指的是统一资源定位符（Uniform Resource Locator）。URL无非就是一个给定的独特资源在Web上的地址。
+URL包含哪几部分？作用分别是什么？ URL由三部分组成：协议类型，服务器地址和路径及文件名。
+标准格式如下：
+[协议类型]://[服务器地址]:[端口号]/[资源层级UNIX文件路径][文件名]?[查询]#[片段ID] 完整格式如下：
+[协议类型]://[访问资源需要的凭证信息]@[服务器地址]:[端口号]/[资源层级UNIX文件路径][文件名]?[查询]#[片段ID] 其中 `[访问凭证信息]、[端口号]、[查询]、[片段ID]`都属于选填项。   协议（protocol）：指的是使用什么样的传输协议，一般有http、ftp、file等协议。 服务器。（通常为域名，有时为IP地址） 端口号。（以数字方式表示，若为默认值可省略） 路径。（以“/”字符区别路径中的每一个目录名称） 查询。（GET模式的窗体参数，以“?”字符为起点，每个参数以“&amp;”隔开，再以“=”分开参数名称与数据，通常以UTF8的URL编码，避开字符冲突的问题） 片段。以“#”字符为起点  DNS 的作用是什么，nslookup 命令怎么用 DNS(域名系统,Domain Name System）是互联网的一项服务。它作为将域名和IP地址相互映射的一个分布式数据库，能够使人更方便地访问互联网。它的作用很简单，就是根据域名查出IP地址。
+nslookup是一种网络管理命令行工具，可在许多计算机操作系统中使用，用于查询域名系统（DNS）以获得域名或IP地址映射或其他DNS记录。
+nslookup语法：nslookup [ -Option ... ] [ Host ] [ -NameServer ]
+IP 的作用是什么，ping 命令怎么用 IP简单的理解就是门牌号。
+ping的用法：
+ping [-t] [-a] [-n count] [-l size] [-f] [-i TTL] [-v TOS] [-r count] [-s count] [[-j host-list] | [-k host-list]] [-w timeout] [-R] [-S srcaddr] [-4] [-6] target_name -t ： Ping 指定的计算机直到中断。 -a ： 将地址解析为计算机名。 -n count ： 发送 count 指定的 ECHO 数据包数。默认值为 4。 -l size ： 发送包含由 size 指定的数据量的 ECHO 数据包。默认为 32 字节；最大值是65,527。 -f ： 在数据包中发送&quot;不要分段&quot;标志。数据包就不会被路由上的网关分段。 -i ttl : 将&quot;生存时间&quot;字段设置为 ttl 指定的值。 -v tos : 将&quot;服务类型&quot;字段设置为 tos 指定的值。 -r count : 在&quot;记录路由&quot;字段中记录传出和返回数据包的路由。count 可以指定最少 1 台，最多 9 台计算机。 -s count : 指定 count 指定的跃点数的时间戳。 -j host-list : 利用 host-list 指定的计算机列表路由数据包。连续计算机可以被中间网关分隔（路由稀疏源）IP 允许的最大数量为 9。 -k host-list : 利用 host-list 指定的计算机列表路由数据包。连续计算机不能被中间网关分隔（路由严格源）IP 允许的最大数量为 9。 -w timeout : 指定超时间隔，单位为毫秒。 destination-list : 指定要 ping 的远程计算机。 " />
+  <meta property="og:locale" content="en-us" />
+
+  <link rel="stylesheet" href="/css/flexboxgrid-6.3.1.min.css" />
+  <link rel="stylesheet" href="/css/github-markdown.css" />
+  <link rel="stylesheet" href="/css/highlight/tomorrow.min.css" />
+  <link rel="stylesheet" href="/css/index.css">
+  <link href="/index.xml" rel="alternate" type="application/rss+xml"
+    title="马小达的博客">
+  
+  <link href="https://fonts.googleapis.com/css?family=Arvo|Permanent+Marker|Bree+Serif" rel="stylesheet">
+  
+  
+
+  
+</head>
+
+<body>
+  <article class="post " id="article">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="site-header">
+          
+<header>
+  <div class="signatures site-title">
+    <a href="/">Maxiaoda&#39;s Blog</a>
+  </div>
+</header>
+<div class="row end-xs">
+  
+  
+</div>
+<div class="header-line"></div>
+
+        </div>
+        <header class="post-header">
+          <h1 class="post-title">浅析URL</h1>
+          
+          <div class="row post-desc">
+            <div class="col-xs-6">
+              
+              <time class="post-date" datetime="2020-03-24 01:05:43 CST">
+                24 Mar 2020
+              </time>
+              
+            </div>
+            <div class="col-xs-6">
+              
+            </div>
+          </div>
+          
+        </header>
+
+        <div class="post-content markdown-body">
+          
+          <h1 id="什么是url">什么是URL</h1>
+<p>URL指的是统一资源定位符（Uniform Resource Locator）。URL无非就是一个给定的独特资源在Web上的地址。</p>
+<h2 id="url包含哪几部分作用分别是什么">URL包含哪几部分？作用分别是什么？</h2>
+<p>URL由三部分组成：协议类型，服务器地址和路径及文件名。</p>
+<p>标准格式如下：</p>
+<pre><code>[协议类型]://[服务器地址]:[端口号]/[资源层级UNIX文件路径][文件名]?[查询]#[片段ID]
+</code></pre><p>完整格式如下：</p>
+<pre><code>[协议类型]://[访问资源需要的凭证信息]@[服务器地址]:[端口号]/[资源层级UNIX文件路径][文件名]?[查询]#[片段ID]
+</code></pre><pre><code>其中 `[访问凭证信息]、[端口号]、[查询]、[片段ID]`都属于选填项。
+</code></pre>
+<ul>
+<li>协议（protocol）：指的是使用什么样的传输协议，一般有http、ftp、file等协议。</li>
+<li>服务器。（通常为域名，有时为IP地址）</li>
+<li>端口号。（以数字方式表示，若为默认值可省略）</li>
+<li>路径。（以“/”字符区别路径中的每一个目录名称）</li>
+<li>查询。（GET模式的窗体参数，以“?”字符为起点，每个参数以“&amp;”隔开，再以“=”分开参数名称与数据，通常以UTF8的URL编码，避开字符冲突的问题）</li>
+<li>片段。以“#”字符为起点</li>
+</ul>
+<h2 id="dns-的作用是什么nslookup-命令怎么用">DNS 的作用是什么，nslookup 命令怎么用</h2>
+<p>DNS(域名系统,Domain Name System）是互联网的一项服务。它作为将域名和IP地址相互映射的一个分布式数据库，能够使人更方便地访问互联网。它的作用很简单，就是根据域名查出IP地址。</p>
+<p>nslookup是一种网络管理命令行工具，可在许多计算机操作系统中使用，用于查询域名系统（DNS）以获得域名或IP地址映射或其他DNS记录。</p>
+<p>nslookup语法：<code>nslookup [ -Option ... ] [ Host ] [ -NameServer ]</code></p>
+<h2 id="ip-的作用是什么ping-命令怎么用">IP 的作用是什么，ping 命令怎么用</h2>
+<p>IP简单的理解就是门牌号。</p>
+<p>ping的用法：</p>
+<pre><code>ping [-t] [-a] [-n count] [-l size] [-f] [-i TTL] [-v TOS]
+     [-r count] [-s count] [[-j host-list] | [-k host-list]]
+     [-w timeout] [-R] [-S srcaddr] [-4] [-6] target_name
+
+-t ：
+    Ping 指定的计算机直到中断。
+-a ：
+    将地址解析为计算机名。
+-n count ：
+    发送 count 指定的 ECHO 数据包数。默认值为 4。
+-l size ：
+    发送包含由 size 指定的数据量的 ECHO 数据包。默认为 32 字节；最大值是65,527。
+-f ：
+    在数据包中发送&quot;不要分段&quot;标志。数据包就不会被路由上的网关分段。
+-i ttl :
+    将&quot;生存时间&quot;字段设置为 ttl 指定的值。
+-v tos :
+    将&quot;服务类型&quot;字段设置为 tos 指定的值。
+-r count :
+    在&quot;记录路由&quot;字段中记录传出和返回数据包的路由。count 可以指定最少 1 台，最多 9 台计算机。
+-s count :
+    指定 count 指定的跃点数的时间戳。
+-j host-list :
+    利用 host-list 指定的计算机列表路由数据包。连续计算机可以被中间网关分隔（路由稀疏源）IP 允许的最大数量为 9。
+-k host-list :
+    利用 host-list 指定的计算机列表路由数据包。连续计算机不能被中间网关分隔（路由严格源）IP 允许的最大数量为 9。
+-w timeout :
+    指定超时间隔，单位为毫秒。
+destination-list :
+    指定要 ping 的远程计算机。
+</code></pre>
+        </div>
+
+        <div class="row middle-xs">
+          <div class="col-xs-12">
+            
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            
+          </div>
+        </div>
+
+        
+        
+
+        
+        
+        <div style="height: 50px;"></div>
+        
+        
+
+        <div class="site-footer">
+  
+  <div class="site-footer-item">
+    <a href="https://github.com/maxiaoda" target="_blank">Github</a>
+  </div>
+  
+  
+</div>
+
+      </div>
+    </div>
+  </article>
+
+  <script src="/js/highlight.pack.js"></script>
+
+
+<script>
+  hljs.initHighlightingOnLoad();
+  
+  
+  
+    
+    
+  
+</script>
+
+  
+
+</body>
+
+</html>

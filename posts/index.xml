@@ -6,18 +6,36 @@
     <description>Recent content in Posts on 马小达的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Mar 2020 22:11:41 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 24 Mar 2020 01:05:43 +0800</lastBuildDate>
     
 	<atom:link href="https://maxiaoda.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>《HTML常用标签》</title>
+      <title>浅析URL</title>
+      <link>https://maxiaoda.github.io/posts/%E5%85%B3%E4%BA%8Eurl%E7%9A%84%E5%8D%9A%E5%AE%A2-%E6%B5%85%E6%9E%90url/</link>
+      <pubDate>Tue, 24 Mar 2020 01:05:43 +0800</pubDate>
+      
+      <guid>https://maxiaoda.github.io/posts/%E5%85%B3%E4%BA%8Eurl%E7%9A%84%E5%8D%9A%E5%AE%A2-%E6%B5%85%E6%9E%90url/</guid>
+      <description>什么是URL URL指的是统一资源定位符（Uniform Resource Locator）。URL无非就是一个给定的独特资源在Web上的地址。
+URL包含哪几部分？作用分别是什么？ URL由三部分组成：协议类型，服务器地址和路径及文件名。
+标准格式如下：
+[协议类型]://[服务器地址]:[端口号]/[资源层级UNIX文件路径][文件名]?[查询]#[片段ID] 完整格式如下：
+[协议类型]://[访问资源需要的凭证信息]@[服务器地址]:[端口号]/[资源层级UNIX文件路径][文件名]?[查询]#[片段ID] 其中 `[访问凭证信息]、[端口号]、[查询]、[片段ID]`都属于选填项。   协议（protocol）：指的是使用什么样的传输协议，一般有http、ftp、file等协议。 服务器。（通常为域名，有时为IP地址） 端口号。（以数字方式表示，若为默认值可省略） 路径。（以“/”字符区别路径中的每一个目录名称） 查询。（GET模式的窗体参数，以“?”字符为起点，每个参数以“&amp;amp;”隔开，再以“=”分开参数名称与数据，通常以UTF8的URL编码，避开字符冲突的问题） 片段。以“#”字符为起点  DNS 的作用是什么，nslookup 命令怎么用 DNS(域名系统,Domain Name System）是互联网的一项服务。它作为将域名和IP地址相互映射的一个分布式数据库，能够使人更方便地访问互联网。它的作用很简单，就是根据域名查出IP地址。
+nslookup是一种网络管理命令行工具，可在许多计算机操作系统中使用，用于查询域名系统（DNS）以获得域名或IP地址映射或其他DNS记录。
+nslookup语法：nslookup [ -Option ... ] [ Host ] [ -NameServer ]
+IP 的作用是什么，ping 命令怎么用 IP简单的理解就是门牌号。
+ping的用法：
+ping [-t] [-a] [-n count] [-l size] [-f] [-i TTL] [-v TOS] [-r count] [-s count] [[-j host-list] | [-k host-list]] [-w timeout] [-R] [-S srcaddr] [-4] [-6] target_name -t ： Ping 指定的计算机直到中断。 -a ： 将地址解析为计算机名。 -n count ： 发送 count 指定的 ECHO 数据包数。默认值为 4。 -l size ： 发送包含由 size 指定的数据量的 ECHO 数据包。默认为 32 字节；最大值是65,527。 -f ： 在数据包中发送&amp;quot;不要分段&amp;quot;标志。数据包就不会被路由上的网关分段。 -i ttl : 将&amp;quot;生存时间&amp;quot;字段设置为 ttl 指定的值。 -v tos : 将&amp;quot;服务类型&amp;quot;字段设置为 tos 指定的值。 -r count : 在&amp;quot;记录路由&amp;quot;字段中记录传出和返回数据包的路由。count 可以指定最少 1 台，最多 9 台计算机。 -s count : 指定 count 指定的跃点数的时间戳。 -j host-list : 利用 host-list 指定的计算机列表路由数据包。连续计算机可以被中间网关分隔（路由稀疏源）IP 允许的最大数量为 9。 -k host-list : 利用 host-list 指定的计算机列表路由数据包。连续计算机不能被中间网关分隔（路由严格源）IP 允许的最大数量为 9。 -w timeout : 指定超时间隔，单位为毫秒。 destination-list : 指定要 ping 的远程计算机。 </description>
+    </item>
+    
+    <item>
+      <title>HTML常用标签</title>
       <link>https://maxiaoda.github.io/posts/%E5%85%B3%E4%BA%8Ehtml%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE%E7%9A%84%E5%8D%9A%E5%AE%A2/</link>
       <pubDate>Mon, 23 Mar 2020 22:11:41 +0800</pubDate>
       
       <guid>https://maxiaoda.github.io/posts/%E5%85%B3%E4%BA%8Ehtml%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE%E7%9A%84%E5%8D%9A%E5%AE%A2/</guid>
-      <description>关于HTML的常用标签 什么是HTML HTML的全拼为 HyperText Markup Language 是一种用于创建网页的标准标记语言，也是构成Web世界的一砖一瓦。
+      <description>什么是HTML HTML的全拼为 HyperText Markup Language 是一种用于创建网页的标准标记语言，也是构成Web世界的一砖一瓦。
 “超文本”（hypertext）是指连接单个网站内或多个网站间的网页的链接。链接是网络的一个基本方面。只要将内容上传到互联网，并将其与他人创建的页面相链接，你就成为了万维网的积极参与者。
 HTML 使用“标记”（markup）来注明文本、图片和其他内容，以便于在 Web 浏览器中显示。
 a 标签的用法 很常用的标签
